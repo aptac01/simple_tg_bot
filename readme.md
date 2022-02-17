@@ -13,3 +13,5 @@ python3 -m venv env
 ```
 ./env/bin/python main.py
 ```
+
+Для использования нужно создать бота через bot_father'а, токен поместить в файл config.txt
