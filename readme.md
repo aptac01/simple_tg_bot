@@ -1,4 +1,4 @@
-##simple_tg_bot
+## simple_tg_bot
 
 Телеграм-бот с базовыми реакциями на юзера на основе PTB (https://github.com/python-telegram-bot/python-telegram-bot)
 
