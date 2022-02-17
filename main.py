@@ -16,9 +16,8 @@ def start(update: Update, context: CallbackContext):
            ' первый освободившийся Ашот. Пока можете посмотреть на меню:'
     context.bot.send_message(chat_id=update.effective_chat.id, text=text)
 
-    pic_file = open('pic.jpg', 'rb')
-    context.bot.send_photo(chat_id=update.effective_chat.id, photo=pic_file)
-    pic_file.close()
+    with open('pic.jpg', 'rb') as pic_file:
+        context.bot.send_photo(chat_id=update.effective_chat.id, photo=pic_file)
 
 
 def echo(update: Update, context: CallbackContext):
@@ -27,7 +26,7 @@ def echo(update: Update, context: CallbackContext):
     """
     if update.message is not None:
         user_msg = update.message.text
-        reply = f'> {user_msg}\nВай! Зачэм ругаэщся! Не ругайса, ну?!'
+        reply = f'> {user_msg}\nТебе сказали - жди? Вот и жди!'
     else:
         user_msg = update.edited_message.text
         reply = f'> {user_msg}\nТы чо йопта, думал я не замечу?'
