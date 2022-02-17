@@ -16,8 +16,8 @@ def start(update: Update, context: CallbackContext):
            ' первый освободившийся Ашот. Пока можете посмотреть на меню:'
     context.bot.send_message(chat_id=update.effective_chat.id, text=text)
 
-    pic_file = open('config.txt', 'r')
-    context.bot.send_photo(chat_id=update.effective_chat.id, photo='https://imgur.com/a/sQ3IOvX')
+    pic_file = open('pic.jpg', 'rb')
+    context.bot.send_photo(chat_id=update.effective_chat.id, photo=pic_file)
     pic_file.close()
 
 
