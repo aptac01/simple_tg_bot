@@ -1,0 +1,25 @@
+-- перед выполнением:
+-- заполнить пароль пользователя SYSDBA (см. ниже);
+-- создать алиас базы в aliases.conf.
+
+--CREATE DATABASE 'SIMPLE_TG_BOT'
+--USER 'SYSDBA' PASSWORD ''
+--DEFAULT CHARACTER SET UTF8;
+--
+--CREATE USER tg_bot PASSWORD 'tg_bot_password';
+--CREATE ROLE ROLE_ADMIN;
+--
+--GRANT ROLE_ADMIN TO tg_bot;
+--
+--CREATE TABLE USER_REQUESTS_STATS
+--(
+--   USER_ID varchar(64) NOT NULL CONSTRAINT PK_USER_REQUESTS_STATS PRIMARY KEY,
+--   DATE_OF timestamp
+--);
+
+COMMENT ON TABLE USER_REQUESTS_STATS IS 'Статистика по обращениям пользователей';
+
+COMMENT ON COLUMN USER_REQUESTS_STATS.USER_ID IS 'ИД пользователя из телеги';
+COMMENT ON COLUMN USER_REQUESTS_STATS.DATE_OF IS 'Дата события';
+
+--GRANT ALL ON TABLE USER_REQUESTS_STATS TO ROLE ROLE_ADMIN WITH GRANT OPTION;
